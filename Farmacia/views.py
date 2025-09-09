@@ -37,6 +37,7 @@ def postar(req):
 
     return render(req, "postar.html", {"formulario": form}) 
     
+    todos_posts = models.Post.objects.all()
 def ver_postagens(req):
     todos_posts = models.Post.objects.all()
     return render(req, 'listar_posts.html', {
